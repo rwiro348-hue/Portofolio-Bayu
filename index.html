@@ -1,14 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bayu Andriana | AI Trainer & Data Annotator</title>
-  <meta name="description" content="Portfolio of Bayu Andriana - AI Trainer, Data Annotator, and Communication Science Specialist with expertise in LLM response evaluation, data labeling, and public relations.">
+  <meta name="description"
+    content="Portfolio of Bayu Andriana - AI Trainer, Data Annotator, and Communication Science Specialist with expertise in LLM response evaluation, data labeling, and public relations.">
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22 font-weight=%22bold%22 fill=%22%230052ff%22>B.</text></svg>">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22 font-weight=%22bold%22 fill=%22%230052ff%22>B.</text></svg>">
 </head>
-<body>
+
+<body class="is-loading">
+
+  <!-- =========================================================================
+       Preloader / Sleek Dark Loading Screen (Inspired by Reference)
+       ========================================================================= -->
+  <div id="pageLoader" class="page-loader" aria-label="Loading portfolio" role="status" aria-live="polite">
+    <!-- Starfield Dot Pattern & Subtle Radial Coral Ambient Bloom -->
+    <div class="loader-bg-ambient" aria-hidden="true"></div>
+    <div class="loader-bg-dots" aria-hidden="true"></div>
+
+    <div class="loader-card">
+      <!-- Top 3 Circular Icon Capsules -->
+      <div class="loader-icons-group">
+        <div class="loader-icon-pill" title="Code & Systems" aria-hidden="true">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="16 18 22 12 16 6"></polyline>
+            <polyline points="8 6 2 12 8 18"></polyline>
+          </svg>
+        </div>
+        <div class="loader-icon-pill" title="About Bayu Andriana" aria-hidden="true">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+        </div>
+        <div class="loader-icon-pill" title="Global Connectivity" aria-hidden="true">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Main Headline with Gradient and Coral Sparkle Star -->
+      <h1 class="loader-heading">
+        <span class="loader-heading-sub">Welcome To My</span>
+        <span class="loader-heading-main">
+          <span class="loader-gradient-text">Portfolio Website</span>
+          <span class="loader-sparkle-wrap" aria-hidden="true">
+            <svg class="loader-sparkle-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 0C12 6.627 6.627 12 0 12C6.627 12 12 17.373 12 24C12 17.373 17.373 12 24 12C17.373 12 12 6.627 12 0Z" />
+            </svg>
+          </span>
+        </span>
+      </h1>
+
+      <!-- Website / Domain Pill with Live Indicator Dot -->
+      <div class="loader-domain-pill">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round" class="loader-domain-globe">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="2" y1="12" x2="22" y2="12"></line>
+          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+        </svg>
+        <span class="loader-domain-name">bayuandriana.com</span>
+        <span class="loader-live-dot" title="Active"></span>
+      </div>
+
+      <!-- Status Subtitle (Syncing Text) -->
+      <div class="loader-status-text" id="loaderStatusText">
+        SYNCING AI PORTFOLIO ASSETS...
+      </div>
+
+      <!-- Loading Progress Track & Fill with Glowing Head Bead -->
+      <div class="loader-bar-wrap">
+        <div class="loader-bar-track">
+          <div class="loader-bar-fill" id="loaderBarFill" style="width: 0%;">
+            <span class="loader-bar-bead"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Numbers & Skip Button -->
+      <div class="loader-meta-row">
+        <div class="loader-percent" id="loaderPercent">0%</div>
+        <button class="loader-skip-pill" id="loaderSkipBtn" type="button" aria-label="Skip Loading">
+          <span>Skip [Esc]</span>
+          <span class="loader-skip-chevron">&#8250;</span>
+        </button>
+      </div>
+    </div>
+  </div>
 
   <!-- =========================================================================
        Navbar
@@ -22,7 +112,7 @@
       <nav>
         <ul class="nav-menu" id="navLinks">
           <li><a href="#home" class="nav-link active">Home</a></li>
-          <li><a href="#projects" class="nav-link">Portfolio</a></li>
+          <li><a href="#experience" class="nav-link">Work Experience</a></li>
           <li><a href="#about" class="nav-link">About</a></li>
           <li><a href="#services" class="nav-link">Services</a></li>
           <li><a href="#education" class="nav-link">Education</a></li>
@@ -31,8 +121,12 @@
       </nav>
 
       <div class="nav-actions" style="display: flex; align-items: center; gap: 12px;">
-        <a href="https://www.linkedin.com/in/bayuandriana" target="_blank" rel="noopener noreferrer" class="btn-linkedin-nav" title="LinkedIn Profile" aria-label="LinkedIn">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+        <a href="https://www.linkedin.com/in/bayuandriana" target="_blank" rel="noopener noreferrer"
+          class="btn-linkedin-nav" title="LinkedIn Profile" aria-label="LinkedIn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+          </svg>
         </a>
         <button class="btn-talk-nav" id="btnHireMeNav" onclick="openContactModal()">
           LET'S TALK <span class="arrow-up-right">&#8599;</span>
@@ -60,22 +154,28 @@
           DATA ANNOTATOR
         </h1>
         <p class="hero-desc">
-          I evaluate and benchmark intelligent AI models, curate precision datasets, and bridge human communication with rigorous algorithmic quality standards.
+          I evaluate and benchmark intelligent AI models, curate precision datasets, and bridge human communication with
+          rigorous algorithmic quality standards.
         </p>
 
         <div class="hero-cta-group">
-          <a href="#projects" class="hero-work-btn" id="heroBtnWork">
+          <a href="#experience" class="hero-work-btn" id="heroBtnWork">
             <span class="btn-arrow-circle">&#8594;</span>
-            <span>VIEW MY WORK</span>
+            <span>Work Experience</span>
           </a>
 
-          <a href="https://www.linkedin.com/in/bayuandriana" target="_blank" rel="noopener noreferrer" class="hero-linkedin-btn" title="Connect on LinkedIn">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+          <a href="https://www.linkedin.com/in/bayuandriana" target="_blank" rel="noopener noreferrer"
+            class="hero-linkedin-btn" title="Connect on LinkedIn">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+            </svg>
             <span>LINKEDIN</span>
           </a>
 
           <!-- Circular Rubber Stamp Badge -->
-          <div class="stamp-badge" onclick="openContactModal()" title="Available for Freelance & Full-time Opportunities">
+          <div class="stamp-badge" onclick="openContactModal()"
+            title="Available for Freelance & Full-time Opportunities">
             <svg viewBox="0 0 160 160" class="stamp-svg">
               <path id="stampPath" d="M 80, 80 m -60, 0 a 60,60 0 1,1 120,0 a 60,60 0 1,1 -120,0" fill="none" />
               <text class="stamp-text">
@@ -101,7 +201,7 @@
         <div class="hero-composite-wrap">
           <!-- Solid Electric Blue Rectangle Backdrop -->
           <div class="hero-blue-block"></div>
-          
+
           <!-- Portrait photo -->
           <img src="assets/hero_avatar.jpg" alt="Bayu Andriana - AI Trainer & Data Annotator" class="hero-portrait">
 
@@ -146,67 +246,470 @@
   </section>
 
   <!-- =========================================================================
-       Selected Work Section
+       Pengalaman Kerja (Work Experience) Section
        ========================================================================= -->
-  <section class="selected-work" id="projects">
+  <section class="selected-work experience-section" id="experience">
+    <!-- Fallback anchor for backward compatibility -->
+    <span id="projects" style="position: absolute; top: -80px;"></span>
     <div class="container">
       <div class="section-head-split">
-        <h2 class="section-title-bold">
-          SELECTED <span class="text-blue">WORK</span>
-        </h2>
+        <div>
+          <span class="section-eyebrow">CAREER &amp; TRACK RECORD</span>
+          <h2 class="section-title-bold">
+            Work <span class="text-blue">Experience</span>
+          </h2>
+        </div>
         <a href="#contact" class="view-all-link">
-          VIEW ALL PROJECTS <span class="arrow-up-right">&#8599;</span>
+          CONTACT ME <span class="arrow-up-right">&#8599;</span>
         </a>
       </div>
 
-      <div class="work-cards-grid">
-        <!-- Project 1 -->
-        <div class="work-card" id="projectCard1" onclick="openProjectModal(1)">
-          <div class="work-card-thumb-wrap">
-            <img src="assets/project_ai.jpg" alt="AI Trainer & Response Evaluation" class="work-card-thumb">
-          </div>
-          <div class="work-card-info">
-            <div>
-              <div class="work-card-category">AI MODEL EVALUATION</div>
-              <div class="work-card-subtitle">LLM Benchmarking & Annotation</div>
+      <!-- 3D Cover Flow Carousel for Work Experience -->
+      <div class="carousel-3d-wrapper" id="experienceCarouselWrapper">
+        <div class="carousel-3d-stage" id="experienceCarouselStage">
+
+          <!-- Card 0: DataAnnotation (AI Data Annotator) -->
+          <div class="carousel-3d-card card-pos-active" data-index="0" onclick="handleExpCardClick(0)" id="expCard1">
+            <div class="service-card-inner exp-card-inner">
+              <!-- Technical Pipeline Canvas -->
+              <div class="flow-canvas">
+                <div class="flow-grid-layout">
+                  <!-- Row 1 -->
+                  <div class="flow-cell col-left">
+                    <div class="flow-node flow-node-dark">Raw data in</div>
+                  </div>
+                  <div class="flow-cell col-mid-h">
+                    <div class="arrow-right-svg" aria-hidden="true">
+                      <svg width="22" height="12" viewBox="0 0 22 12" fill="none">
+                        <path d="M0 6H20M20 6L15 1M20 6L15 11" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="flow-cell col-right">
+                    <div class="flow-node flow-node-light">Schema guidelines</div>
+                  </div>
+
+                  <!-- Connector Row 1 -> 2 -->
+                  <div class="flow-cell col-left empty-cell"></div>
+                  <div class="flow-cell col-mid-h empty-cell"></div>
+                  <div class="flow-cell col-right v-arrow-cell">
+                    <div class="arrow-down-svg" aria-hidden="true">
+                      <svg width="12" height="18" viewBox="0 0 12 18" fill="none">
+                        <path d="M6 0V16M6 16L1 11M6 16L11 11" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </div>
+                  </div>
+
+                  <!-- Row 2 -->
+                  <div class="flow-cell col-left">
+                    <div class="flow-node flow-node-light">Multi-turn labeling</div>
+                  </div>
+                  <div class="flow-cell col-mid-h">
+                    <div class="arrow-left-svg" aria-hidden="true">
+                      <svg width="22" height="12" viewBox="0 0 22 12" fill="none">
+                        <path d="M22 6H2M2 6L7 1M2 6L7 11" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="flow-cell col-right">
+                    <div class="flow-node flow-node-light">Attribute tagging</div>
+                  </div>
+
+                  <!-- Connector Row 2 -> 3 -->
+                  <div class="flow-cell col-left v-arrow-cell">
+                    <div class="arrow-down-svg" aria-hidden="true">
+                      <svg width="12" height="18" viewBox="0 0 12 18" fill="none">
+                        <path d="M6 0V16M6 16L1 11M6 16L11 11" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="flow-cell col-mid-h empty-cell"></div>
+                  <div class="flow-cell col-right empty-cell"></div>
+
+                  <!-- Row 3 -->
+                  <div class="flow-cell col-left">
+                    <div class="flow-node flow-node-light">Consensus IAA check</div>
+                  </div>
+                  <div class="flow-cell col-mid-h">
+                    <div class="arrow-right-svg" aria-hidden="true">
+                      <svg width="22" height="12" viewBox="0 0 22 12" fill="none">
+                        <path d="M0 6H20M20 6L15 1M20 6L15 11" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="flow-cell col-right">
+                    <div class="flow-node flow-node-light">ML dataset delivery</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Concise Info Area -->
+              <div class="exp-flow-info">
+                <div class="exp-flow-badge-row">
+                  <span class="exp-badge-icon" aria-hidden="true">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M12 20h9"></path>
+                      <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+                    </svg>
+                  </span>
+                  <span class="exp-badge-cat">AI Data Annotation</span>
+                  <span class="exp-badge-comma">,</span>
+                  <span class="exp-badge-type">Saat ini</span>
+                </div>
+
+                <h3 class="exp-flow-heading">
+                  DataAnnotation
+                  <span class="exp-flow-role">&bull; AI Annotator</span>
+                </h3>
+
+                <p class="exp-flow-paragraph">
+                  Labeled and evaluated bilingual datasets for machine learning & LLM alignment.
+                </p>
+              </div>
             </div>
-            <div class="work-card-arrow">&#8599;</div>
           </div>
+
+          <!-- Card 1: Mercor (User Experience Researcher) -->
+          <div class="carousel-3d-card card-pos-right" data-index="1" onclick="handleExpCardClick(1)" id="expCard2">
+            <div class="service-card-inner exp-card-inner">
+              <!-- Technical Pipeline Canvas -->
+              <div class="flow-canvas">
+                <div class="flow-grid-layout">
+                  <!-- Row 1 -->
+                  <div class="flow-cell col-left">
+                    <div class="flow-node flow-node-dark">Prompt design in</div>
+                  </div>
+                  <div class="flow-cell col-mid-h">
+                    <div class="arrow-right-svg" aria-hidden="true">
+                      <svg width="22" height="12" viewBox="0 0 22 12" fill="none">
+                        <path d="M0 6H20M20 6L15 1M20 6L15 11" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="flow-cell col-right">
+                    <div class="flow-node flow-node-light">Workflow mapping</div>
+                  </div>
+
+                  <!-- Connector Row 1 -> 2 -->
+                  <div class="flow-cell col-left empty-cell"></div>
+                  <div class="flow-cell col-mid-h empty-cell"></div>
+                  <div class="flow-cell col-right v-arrow-cell">
+                    <div class="arrow-down-svg" aria-hidden="true">
+                      <svg width="12" height="18" viewBox="0 0 12 18" fill="none">
+                        <path d="M6 0V16M6 16L1 11M6 16L11 11" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </div>
+                  </div>
+
+                  <!-- Row 2 -->
+                  <div class="flow-cell col-left">
+                    <div class="flow-node flow-node-light">Reasoning stress-test</div>
+                  </div>
+                  <div class="flow-cell col-mid-h">
+                    <div class="arrow-left-svg" aria-hidden="true">
+                      <svg width="22" height="12" viewBox="0 0 22 12" fill="none">
+                        <path d="M22 6H2M2 6L7 1M2 6L7 11" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="flow-cell col-right">
+                    <div class="flow-node flow-node-light">Heuristic audit</div>
+                  </div>
+
+                  <!-- Connector Row 2 -> 3 -->
+                  <div class="flow-cell col-left v-arrow-cell">
+                    <div class="arrow-down-svg" aria-hidden="true">
+                      <svg width="12" height="18" viewBox="0 0 12 18" fill="none">
+                        <path d="M6 0V16M6 16L1 11M6 16L11 11" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="flow-cell col-mid-h empty-cell"></div>
+                  <div class="flow-cell col-right empty-cell"></div>
+
+                  <!-- Row 3 -->
+                  <div class="flow-cell col-left">
+                    <div class="flow-node flow-node-light">Content assessment</div>
+                  </div>
+                  <div class="flow-cell col-mid-h">
+                    <div class="arrow-right-svg" aria-hidden="true">
+                      <svg width="22" height="12" viewBox="0 0 22 12" fill="none">
+                        <path d="M0 6H20M20 6L15 1M20 6L15 11" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="flow-cell col-right">
+                    <div class="flow-node flow-node-light">LLM benchmark output</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Concise Info Area -->
+              <div class="exp-flow-info">
+                <div class="exp-flow-badge-row">
+                  <span class="exp-badge-icon" aria-hidden="true">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="16 18 22 12 16 6"></polyline>
+                      <polyline points="8 6 2 12 8 18"></polyline>
+                    </svg>
+                  </span>
+                  <span class="exp-badge-cat">UX Research</span>
+                  <span class="exp-badge-comma">,</span>
+                  <span class="exp-badge-type">Saat ini</span>
+                </div>
+
+                <h3 class="exp-flow-heading">
+                  Mercor
+                  <span class="exp-flow-role">&bull; UX Researcher</span>
+                </h3>
+
+                <p class="exp-flow-paragraph">
+                  Evaluated prompts and optimized AI-supported workflows through heuristic testing.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Outlier (AI Data Trainer) -->
+          <div class="carousel-3d-card card-pos-hidden" data-index="2" onclick="handleExpCardClick(2)" id="expCard3">
+            <div class="service-card-inner exp-card-inner">
+              <!-- Technical Pipeline Canvas -->
+              <div class="flow-canvas">
+                <div class="flow-grid-layout">
+                  <!-- Row 1 -->
+                  <div class="flow-cell col-left">
+                    <div class="flow-node flow-node-dark">User prompt in</div>
+                  </div>
+                  <div class="flow-cell col-mid-h">
+                    <div class="arrow-right-svg" aria-hidden="true">
+                      <svg width="22" height="12" viewBox="0 0 22 12" fill="none">
+                        <path d="M0 6H20M20 6L15 1M20 6L15 11" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="flow-cell col-right">
+                    <div class="flow-node flow-node-light">Model completions</div>
+                  </div>
+
+                  <!-- Connector Row 1 -> 2 -->
+                  <div class="flow-cell col-left empty-cell"></div>
+                  <div class="flow-cell col-mid-h empty-cell"></div>
+                  <div class="flow-cell col-right v-arrow-cell">
+                    <div class="arrow-down-svg" aria-hidden="true">
+                      <svg width="12" height="18" viewBox="0 0 12 18" fill="none">
+                        <path d="M6 0V16M6 16L1 11M6 16L11 11" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </div>
+                  </div>
+
+                  <!-- Row 2 -->
+                  <div class="flow-cell col-left">
+                    <div class="flow-node flow-node-light">Hallucination audit</div>
+                  </div>
+                  <div class="flow-cell col-mid-h">
+                    <div class="arrow-left-svg" aria-hidden="true">
+                      <svg width="22" height="12" viewBox="0 0 22 12" fill="none">
+                        <path d="M22 6H2M2 6L7 1M2 6L7 11" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="flow-cell col-right">
+                    <div class="flow-node flow-node-light">Pairwise ranking</div>
+                  </div>
+
+                  <!-- Connector Row 2 -> 3 -->
+                  <div class="flow-cell col-left v-arrow-cell">
+                    <div class="arrow-down-svg" aria-hidden="true">
+                      <svg width="12" height="18" viewBox="0 0 12 18" fill="none">
+                        <path d="M6 0V16M6 16L1 11M6 16L11 11" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="flow-cell col-mid-h empty-cell"></div>
+                  <div class="flow-cell col-right empty-cell"></div>
+
+                  <!-- Row 3 -->
+                  <div class="flow-cell col-left">
+                    <div class="flow-node flow-node-light">RLHF rationale loop</div>
+                  </div>
+                  <div class="flow-cell col-mid-h">
+                    <div class="arrow-right-svg" aria-hidden="true">
+                      <svg width="22" height="12" viewBox="0 0 22 12" fill="none">
+                        <path d="M0 6H20M20 6L15 1M20 6L15 11" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="flow-cell col-right">
+                    <div class="flow-node flow-node-light">Aligned model delivery</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Concise Info Area -->
+              <div class="exp-flow-info">
+                <div class="exp-flow-badge-row">
+                  <span class="exp-badge-icon" aria-hidden="true">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                      <line x1="8" y1="21" x2="16" y2="21"></line>
+                      <line x1="12" y1="17" x2="12" y2="21"></line>
+                    </svg>
+                  </span>
+                  <span class="exp-badge-cat">AI Model Evaluation</span>
+                  <span class="exp-badge-comma">,</span>
+                  <span class="exp-badge-type">Selesai</span>
+                </div>
+
+                <h3 class="exp-flow-heading">
+                  Outlier
+                  <span class="exp-flow-role">&bull; AI Data Trainer</span>
+                </h3>
+
+                <p class="exp-flow-paragraph">
+                  Conducted pairwise response ranking and RLHF rationale audits to align model outputs.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Studydrive (Document Contributor) -->
+          <div class="carousel-3d-card card-pos-left" data-index="3" onclick="handleExpCardClick(3)" id="expCard4">
+            <div class="service-card-inner exp-card-inner">
+              <!-- Technical Pipeline Canvas -->
+              <div class="flow-canvas">
+                <div class="flow-grid-layout">
+                  <!-- Row 1 -->
+                  <div class="flow-cell col-left">
+                    <div class="flow-node flow-node-dark">Coursework in</div>
+                  </div>
+                  <div class="flow-cell col-mid-h">
+                    <div class="arrow-right-svg" aria-hidden="true">
+                      <svg width="22" height="12" viewBox="0 0 22 12" fill="none">
+                        <path d="M0 6H20M20 6L15 1M20 6L15 11" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="flow-cell col-right">
+                    <div class="flow-node flow-node-light">Knowledge synthesis</div>
+                  </div>
+
+                  <!-- Connector Row 1 -> 2 -->
+                  <div class="flow-cell col-left empty-cell"></div>
+                  <div class="flow-cell col-mid-h empty-cell"></div>
+                  <div class="flow-cell col-right v-arrow-cell">
+                    <div class="arrow-down-svg" aria-hidden="true">
+                      <svg width="12" height="18" viewBox="0 0 12 18" fill="none">
+                        <path d="M6 0V16M6 16L1 11M6 16L11 11" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </div>
+                  </div>
+
+                  <!-- Row 2 -->
+                  <div class="flow-cell col-left">
+                    <div class="flow-node flow-node-light">Peer review check</div>
+                  </div>
+                  <div class="flow-cell col-mid-h">
+                    <div class="arrow-left-svg" aria-hidden="true">
+                      <svg width="22" height="12" viewBox="0 0 22 12" fill="none">
+                        <path d="M22 6H2M2 6L7 1M2 6L7 11" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="flow-cell col-right">
+                    <div class="flow-node flow-node-light">Structured study guide</div>
+                  </div>
+
+                  <!-- Connector Row 2 -> 3 -->
+                  <div class="flow-cell col-left v-arrow-cell">
+                    <div class="arrow-down-svg" aria-hidden="true">
+                      <svg width="12" height="18" viewBox="0 0 12 18" fill="none">
+                        <path d="M6 0V16M6 16L1 11M6 16L11 11" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="flow-cell col-mid-h empty-cell"></div>
+                  <div class="flow-cell col-right empty-cell"></div>
+
+                  <!-- Row 3 -->
+                  <div class="flow-cell col-left">
+                    <div class="flow-node flow-node-light">Pedagogical polish</div>
+                  </div>
+                  <div class="flow-cell col-mid-h">
+                    <div class="arrow-right-svg" aria-hidden="true">
+                      <svg width="22" height="12" viewBox="0 0 22 12" fill="none">
+                        <path d="M0 6H20M20 6L15 1M20 6L15 11" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="flow-cell col-right">
+                    <div class="flow-node flow-node-light">Verified student resource</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Concise Info Area -->
+              <div class="exp-flow-info">
+                <div class="exp-flow-badge-row">
+                  <span class="exp-badge-icon" aria-hidden="true">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                    </svg>
+                  </span>
+                  <span class="exp-badge-cat">Academic QA</span>
+                  <span class="exp-badge-comma">,</span>
+                  <span class="exp-badge-type">Selesai</span>
+                </div>
+
+                <h3 class="exp-flow-heading">
+                  Studydrive
+                  <span class="exp-flow-role">&bull; Document Contributor</span>
+                </h3>
+
+                <p class="exp-flow-paragraph">
+                  Authored structured academic study guides and subject summaries for university students.
+                </p>
+              </div>
+            </div>
+          </div>
+
         </div>
 
-        <!-- Project 2 (With Blue Accent Block) -->
-        <div class="work-card work-card-accent-blue" id="projectCard2" onclick="openProjectModal(2)">
-          <div class="work-card-thumb-wrap">
-            <img src="assets/project_pr.jpg" alt="Public Relations Intern West Java Water Resources" class="work-card-thumb">
-          </div>
-          <div class="work-card-info">
-            <div>
-              <div class="work-card-category">PUBLIC RELATIONS</div>
-              <div class="work-card-subtitle">West Java Water Resources Agency</div>
-            </div>
-            <div class="work-card-arrow">&#8599;</div>
-          </div>
-        </div>
+        <!-- Carousel Navigation Controls -->
+        <div class="carousel-controls">
+          <button class="carousel-arrow-btn prev-btn" id="expCarouselPrevBtn" onclick="prevExperienceCard()"
+            type="button" aria-label="Previous Experience">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+          </button>
 
-        <!-- Project 3 -->
-        <div class="work-card" id="projectCard3" onclick="openProjectModal(3)">
-          <div class="work-card-thumb-wrap">
-            <img src="assets/project_studydrive.jpg" alt="StudyDrive Academic Document Contributor" class="work-card-thumb">
+          <!-- 4 Dots Indicators -->
+          <div class="carousel-dots" id="expCarouselDots" role="tablist" aria-label="Experience carousel navigation">
+            <button class="carousel-dot active" data-dot="0" onclick="selectExperienceCard(0)" type="button"
+              aria-label="Go to Experience 1"></button>
+            <button class="carousel-dot" data-dot="1" onclick="selectExperienceCard(1)" type="button"
+              aria-label="Go to Experience 2"></button>
+            <button class="carousel-dot" data-dot="2" onclick="selectExperienceCard(2)" type="button"
+              aria-label="Go to Experience 3"></button>
+            <button class="carousel-dot" data-dot="3" onclick="selectExperienceCard(3)" type="button"
+              aria-label="Go to Experience 4"></button>
           </div>
-          <div class="work-card-info">
-            <div>
-              <div class="work-card-category">STUDYDRIVE CONTRIBUTOR</div>
-              <div class="work-card-subtitle">Academic Knowledge & QA</div>
-            </div>
-            <div class="work-card-arrow">&#8599;</div>
-          </div>
+
+          <button class="carousel-arrow-btn next-btn" id="expCarouselNextBtn" onclick="nextExperienceCard()"
+            type="button" aria-label="Next Experience">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
         </div>
       </div>
     </div>
   </section>
 
   <!-- =========================================================================
-       Services Section (Asymmetric Split Layout)
+       Services Section (Split Editorial Grid)
        ========================================================================= -->
   <section class="services-section" id="services">
     <div class="container">
@@ -222,7 +725,8 @@
           <!-- Service 1 -->
           <div class="service-card-clean">
             <div class="service-icon-circle">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
                 <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
                 <line x1="8" y1="21" x2="16" y2="21"></line>
                 <line x1="12" y1="17" x2="12" y2="21"></line>
@@ -230,48 +734,57 @@
             </div>
             <h3 class="service-card-title">AI RESPONSE EVALUATION</h3>
             <p class="service-card-desc">
-              Rigorous benchmarking, instruction-following assessment, hallucination detection, and alignment for cutting-edge LLMs.
+              Rigorous benchmarking, instruction-following assessment, hallucination detection, and alignment for
+              cutting-edge LLMs.
             </p>
           </div>
 
           <!-- Service 2 -->
           <div class="service-card-clean">
             <div class="service-icon-circle">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
                 <path d="M12 20h9"></path>
                 <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
               </svg>
             </div>
             <h3 class="service-card-title">DATA ANNOTATION & QA</h3>
             <p class="service-card-desc">
-              High-precision multi-turn labeling, RLHF preference ranking, and strict adherence to domain taxonomy guidelines.
+              High-precision multi-turn labeling, RLHF preference ranking, and strict adherence to domain taxonomy
+              guidelines.
             </p>
           </div>
 
           <!-- Service 3 -->
           <div class="service-card-clean">
             <div class="service-icon-circle">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                </polygon>
               </svg>
             </div>
             <h3 class="service-card-title">PUBLIC RELATIONS & PR</h3>
             <p class="service-card-desc">
-              Institutional social media strategy, public awareness communication, and impactful stakeholder narrative design.
+              Institutional social media strategy, public awareness communication, and impactful stakeholder narrative
+              design.
             </p>
           </div>
 
           <!-- Service 4 -->
           <div class="service-card-clean">
             <div class="service-icon-circle">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
                 <polyline points="16 18 22 12 16 6"></polyline>
                 <polyline points="8 6 2 12 8 18"></polyline>
               </svg>
             </div>
             <h3 class="service-card-title">RESEARCH & ANALYSIS</h3>
             <p class="service-card-desc">
-              Verified fact-checking, structured academic document creation, and quantitative-qualitative communication research.
+              Verified fact-checking, structured academic document creation, and quantitative-qualitative communication
+              research.
             </p>
           </div>
         </div>
@@ -292,10 +805,13 @@
             PRECISION IS NOT JUST MY PROFESSION, IT'S MY <span class="text-blue">PASSION.</span>
           </h2>
           <p class="about-body-text">
-            I hold a degree in Communication Science with GPA 3.66 and have 2+ years of hands-on experience as an <strong>AI Trainer</strong>, refining and benchmarking LLM output quality, instruction compliance, and factual reliability.
+            I hold a degree in Communication Science with GPA 3.66 and have 2+ years of hands-on experience as an
+            <strong>AI Trainer</strong>, refining and benchmarking LLM output quality, instruction compliance, and
+            factual reliability.
           </p>
           <p class="about-body-text">
-            With institutional experience at the <strong>West Java Water Resources Agency</strong> and educational publishing on StudyDrive, I turn complex data into gold-standard outputs.
+            With institutional experience at the <strong>West Java Water Resources Agency</strong> and educational
+            publishing on StudyDrive, I turn complex data into gold-standard outputs.
           </p>
           <div class="signature-wrap">
             <span class="handwritten-signature">Bayu Andriana</span>
@@ -354,8 +870,12 @@
             <button class="btn-download-resume" onclick="openCVModal()" style="margin-top: 0;">
               DOWNLOAD RESUME <span style="font-size: 1.1rem; line-height: 1;">&#8595;</span>
             </button>
-            <a href="https://www.linkedin.com/in/bayuandriana" target="_blank" rel="noopener noreferrer" class="btn-linkedin-clean" title="Connect on LinkedIn">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+            <a href="https://www.linkedin.com/in/bayuandriana" target="_blank" rel="noopener noreferrer"
+              class="btn-linkedin-clean" title="Connect on LinkedIn">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+              </svg>
               <span>LINKEDIN</span>
             </a>
           </div>
@@ -371,29 +891,49 @@
     <div class="container">
       <div class="trusted-flex">
         <span class="trusted-label">CORE DOMAINS</span>
-        
+
         <div class="trusted-item">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="m4.93 4.93 4.24 4.24"></path><path d="m14.83 9.17 4.24-4.24"></path><path d="m14.83 14.83 4.24 4.24"></path><path d="m9.17 14.83-4.24 4.24"></path></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="m4.93 4.93 4.24 4.24"></path>
+            <path d="m14.83 9.17 4.24-4.24"></path>
+            <path d="m14.83 14.83 4.24 4.24"></path>
+            <path d="m9.17 14.83-4.24 4.24"></path>
+          </svg>
           <span>Generative AI</span>
         </div>
 
         <div class="trusted-item">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+          </svg>
           <span>Prompt Evaluation</span>
         </div>
 
         <div class="trusted-item">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="16" y1="13" x2="8" y2="13"></line>
+            <line x1="16" y1="17" x2="8" y2="17"></line>
+            <polyline points="10 9 9 9 8 9"></polyline>
+          </svg>
           <span>Data Annotation</span>
         </div>
 
         <div class="trusted-item">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+          </svg>
           <span>Quality Assurance (QA)</span>
         </div>
 
         <div class="trusted-item">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path
+              d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+            </path>
+          </svg>
           <span>Digital Media & PR</span>
         </div>
       </div>
@@ -407,7 +947,8 @@
     <div class="container">
       <div class="edu-clean-card">
         <div class="edu-icon-badge">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
             <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
             <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
           </svg>
@@ -415,7 +956,8 @@
 
         <div>
           <h3 class="edu-title">Bachelor of Communication Science</h3>
-          <div class="edu-place">Information Technology and Business University of Indonesia &bull; Bandung, Indonesia</div>
+          <div class="edu-place">Information Technology and Business University of Indonesia &bull; Bandung, Indonesia
+          </div>
           <div class="edu-course-tags">
             <span class="edu-tag">Public Relations</span>
             <span class="edu-tag">Mass Communication</span>
@@ -462,19 +1004,33 @@
             <div class="footer-col-title">GET IN TOUCH</div>
             <ul class="footer-contact-list">
               <li class="footer-contact-item">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
-                <a href="https://www.linkedin.com/in/bayuandriana" target="_blank" rel="noopener noreferrer">www.linkedin.com/in/bayuandriana</a>
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+                </svg>
+                <a href="https://www.linkedin.com/in/bayuandriana" target="_blank"
+                  rel="noopener noreferrer">www.linkedin.com/in/bayuandriana</a>
               </li>
               <li class="footer-contact-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                  </path>
+                </svg>
                 <a href="tel:+6282219276376">+6282 2192 76376</a>
               </li>
               <li class="footer-contact-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
                 <a href="mailto:bayuandriana15@gmail.com">bayuandriana15@gmail.com</a>
               </li>
               <li class="footer-contact-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
                 <span>Bandung, West Java, ID</span>
               </li>
             </ul>
@@ -484,20 +1040,31 @@
             <div class="footer-col-title">FOLLOW</div>
             <ul class="footer-social-list">
               <li>
-                <a href="https://www.linkedin.com/in/bayuandriana" target="_blank" rel="noopener noreferrer" class="footer-social-link">
-                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+                <a href="https://www.linkedin.com/in/bayuandriana" target="_blank" rel="noopener noreferrer"
+                  class="footer-social-link">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+                  </svg>
                   <span>www.linkedin.com/in/bayuandriana</span>
                 </a>
               </li>
               <li>
-                <a href="https://wa.me/6282219276376" target="_blank" rel="noopener noreferrer" class="footer-social-link">
-                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.26-1.5-1.4-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.38-.44.12-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1s.9 2.43 1.03 2.6c.12.17 1.77 2.71 4.29 3.8 2.52 1.08 2.52.72 2.98.68.46-.05 1.47-.6 1.68-1.18.21-.59.21-1.09.15-1.19-.06-.1-.23-.16-.48-.28z"/></svg>
+                <a href="https://wa.me/6282219276376" target="_blank" rel="noopener noreferrer"
+                  class="footer-social-link">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.26-1.5-1.4-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.38-.44.12-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1s.9 2.43 1.03 2.6c.12.17 1.77 2.71 4.29 3.8 2.52 1.08 2.52.72 2.98.68.46-.05 1.47-.6 1.68-1.18.21-.59.21-1.09.15-1.19-.06-.1-.23-.16-.48-.28z" />
+                  </svg>
                   <span>WhatsApp</span>
                 </a>
               </li>
               <li>
                 <a href="mailto:bayuandriana15@gmail.com" class="footer-social-link">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
                   <span>Email</span>
                 </a>
               </li>
@@ -544,53 +1111,104 @@
       <div class="modal-body">
         <span class="modal-tag">CURRICULUM VITAE</span>
         <h2 class="modal-title">Bayu Andriana</h2>
-        <p style="color: var(--color-primary); font-weight: 700; margin-bottom: 16px; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.05em;">
+        <p
+          style="color: var(--color-primary); font-weight: 700; margin-bottom: 16px; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.05em;">
           AI Trainer &bull; Data Annotator &bull; Digital Communication Specialist
         </p>
 
-        <div style="display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 24px; padding: 14px; background: var(--color-gray-50); border: 1px solid var(--color-gray-200); border-radius: var(--radius-xs); font-size: 0.85rem; color: var(--color-gray-700);">
+        <div
+          style="display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 24px; padding: 14px; background: var(--color-gray-50); border: 1px solid var(--color-gray-200); border-radius: var(--radius-xs); font-size: 0.85rem; color: var(--color-gray-700);">
           <span><strong>Phone:</strong> +6282 2192 76376</span>
           <span><strong>Email:</strong> bayuandriana15@gmail.com</span>
           <span><strong>Location:</strong> Bandung, West Java, ID</span>
-          <span><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/bayuandriana" target="_blank" rel="noopener noreferrer" style="color: var(--color-primary); font-weight: 600;">www.linkedin.com/in/bayuandriana</a></span>
+          <span><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/bayuandriana" target="_blank"
+              rel="noopener noreferrer"
+              style="color: var(--color-primary); font-weight: 600;">www.linkedin.com/in/bayuandriana</a></span>
         </div>
 
         <h3 class="modal-list-title">Executive Summary</h3>
         <p class="modal-desc">
-          Communication Science graduate (GPA 3.66) with over 2 years of proven experience in AI model evaluation, data labeling, and strict QA adherence. Experienced in crafting institutional communications at the West Java Water Resources Agency and creating peer-reviewed educational resources on StudyDrive. Fluent in Indonesian with professional English communication.
+          Communication Science graduate (GPA 3.66) with over 2 years of proven experience in AI model evaluation, data
+          labeling, and strict QA adherence. Experienced in crafting institutional communications at the West Java Water
+          Resources Agency and creating peer-reviewed educational resources on StudyDrive. Fluent in Indonesian with
+          professional English communication.
         </p>
 
         <h3 class="modal-list-title">Education</h3>
         <div style="margin-bottom: 20px; padding: 12px 0; border-bottom: 1px solid var(--color-gray-200);">
-          <div style="font-weight: 800; color: var(--color-black);">Bachelor of Communication Science &bull; 2022 &ndash; 2026</div>
-          <div style="color: var(--color-primary); font-size: 0.88rem; font-weight: 600;">Information Technology and Business University of Indonesia &bull; Bandung, ID</div>
-          <div style="font-size: 0.84rem; color: var(--color-gray-600); margin-top: 4px;">GPA: 3.66 / 4.0 &bull; Honors Distinction</div>
+          <div style="font-weight: 800; color: var(--color-black);">Bachelor of Communication Science &bull; 2022
+            &ndash; 2026</div>
+          <div style="color: var(--color-primary); font-size: 0.88rem; font-weight: 600;">Information Technology and
+            Business University of Indonesia &bull; Bandung, ID</div>
+          <div style="font-size: 0.84rem; color: var(--color-gray-600); margin-top: 4px;">GPA: 3.66 / 4.0 &bull; Honors
+            Distinction</div>
         </div>
 
         <h3 class="modal-list-title">Practical Experience</h3>
         <div style="margin-bottom: 16px;">
-          <div style="font-weight: 800; color: var(--color-black);">AI Trainer & Data Annotator (2024 &ndash; Present)</div>
+          <div style="font-weight: 800; color: var(--color-black);">AI Data Annotator &bull; DataAnnotation (Okt 2026
+            &ndash; Saat ini)</div>
+          <div style="font-size: 0.82rem; color: var(--color-gray-500); margin-bottom: 4px;">Paruh Waktu &bull; Jarak
+            Jauh</div>
           <ul class="modal-list">
-            <li>Evaluated and improved AI-generated responses for complex instruction following and factual correctness.</li>
-            <li>Reviewed datasets and strictly adhered to quality guidelines across multi-turn AI benchmarks.</li>
-            <li>Identified model hallucinations, logical fallacies, and provided structured feedback for RLHF fine-tuning.</li>
-            <li>Maintained 100% QA compliance across high-volume evaluation batches.</li>
+            <li>Labeled and annotated bilingual data sets for machine learning models.</li>
+            <li>Exceeded deadlines for data annotation projects maintaining a high level of accuracy and attention to
+              detail.</li>
           </ul>
         </div>
 
         <div style="margin-bottom: 16px;">
-          <div style="font-weight: 800; color: var(--color-black);">Public Relations Intern &bull; West Java Water Resources Agency</div>
+          <div style="font-weight: 800; color: var(--color-black);">User Experience Researcher &bull; Mercor (Jun 2026
+            &ndash; Saat ini)</div>
+          <div style="font-size: 0.82rem; color: var(--color-gray-500); margin-bottom: 4px;">Kontrak &bull; Amerika
+            Serikat &bull; Jarak Jauh</div>
+          <ul class="modal-list">
+            <li>Prompt Evaluator focusing on AI-supported workflows, prompt design, content assessment, and large
+              language model (LLM) enhancement.</li>
+            <li>Applied prompt evaluation frameworks to stress-test model reasoning and verify instruction adherence.
+            </li>
+          </ul>
+        </div>
+
+        <div style="margin-bottom: 16px;">
+          <div style="font-weight: 800; color: var(--color-black);">AI Data Trainer &bull; Outlier (Mei 2026 &ndash; Sep
+            2026)</div>
+          <div style="font-size: 0.82rem; color: var(--color-gray-500); margin-bottom: 4px;">Paruh Waktu &bull; Amerika
+            Serikat &bull; Jarak Jauh</div>
+          <ul class="modal-list">
+            <li>Evaluated AI-generated responses to user prompts, comparing and analyzing various outputs for model
+              performance.</li>
+            <li>Conducted pairwise comparisons and rubric scoring for RLHF fine-tuning and hallucination detection.</li>
+          </ul>
+        </div>
+
+        <div style="margin-bottom: 16px;">
+          <div style="font-weight: 800; color: var(--color-black);">Document Contributor &bull; Studydrive Platform
+            (2023 &ndash; 2024)</div>
+          <div style="font-size: 0.82rem; color: var(--color-gray-500); margin-bottom: 4px;">Paruh Waktu &bull; Jarak
+            Jauh</div>
+          <ul class="modal-list">
+            <li>Curated and authored university-level academic study guides and subject matter summaries for thousands
+              of students.</li>
+            <li>Maintained meticulous attention to accuracy, grammatical precision, and formatting standards.</li>
+          </ul>
+        </div>
+
+        <div style="margin-bottom: 16px;">
+          <div style="font-weight: 800; color: var(--color-black);">Public Relations Intern &bull; West Java Water
+            Resources Agency (2023)</div>
           <ul class="modal-list">
             <li>Designed Instagram public campaigns, official institutional notices, and educational infographics.</li>
             <li>Transformed complex water management data into clear citizen communications.</li>
           </ul>
         </div>
-
-        <div style="display: flex; gap: 12px; justify-content: flex-end; margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--color-gray-200);">
+        <div
+          style="display: flex; gap: 12px; justify-content: flex-end; margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--color-gray-200);">
           <button class="btn-download-resume" onclick="window.print()" style="margin-top: 0; padding: 10px 18px;">
             PRINT RESUME
           </button>
-          <a href="mailto:bayuandriana15@gmail.com?subject=Job%20Opportunity%20Inquiry" class="btn-talk-nav" style="border-radius: var(--radius-xs);">
+          <a href="mailto:bayuandriana15@gmail.com?subject=Job%20Opportunity%20Inquiry" class="btn-talk-nav"
+            style="border-radius: var(--radius-xs);">
             CONTACT BAYU &#8599;
           </a>
         </div>
@@ -622,11 +1240,13 @@
           </div>
           <div class="form-group">
             <label for="contactSubject" class="form-label">Subject</label>
-            <input type="text" id="contactSubject" class="form-input" placeholder="e.g. AI Evaluation Project Inquiry" required>
+            <input type="text" id="contactSubject" class="form-input" placeholder="e.g. AI Evaluation Project Inquiry"
+              required>
           </div>
           <div class="form-group">
             <label for="contactMessage" class="form-label">Message</label>
-            <textarea id="contactMessage" class="form-textarea" placeholder="Tell me about your project, timeline, and goals..." required></textarea>
+            <textarea id="contactMessage" class="form-textarea"
+              placeholder="Tell me about your project, timeline, and goals..." required></textarea>
           </div>
           <button type="submit" class="btn-submit-form">
             SEND MESSAGE &#8599;
@@ -642,4 +1262,5 @@
   <!-- Scripts -->
   <script src="app.js"></script>
 </body>
+
 </html>
